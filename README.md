@@ -28,7 +28,10 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
-1. Describe the biggest difference between `.forEach` & `.map`.
+1. Describe the biggest difference between `.forEach` & `.map`. 
+
+In a nutshell, .forEach mutates the original array by applying the callback function passed into it on each item in the array. .map creates a new array by applying the callback function passed into it on each item in the array. .forEach changes the original data. .map keeps the original data intact and creates a new set of data.
+  
 
 2. What is the difference between a function and a method?
 
