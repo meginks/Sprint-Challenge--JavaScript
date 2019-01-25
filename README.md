@@ -32,11 +32,25 @@ Edit this document to include your answers after each question. Make sure to lea
 
 2. What is the difference between a function and a method?
 
-3. What is closure?
+To put it simply, a method is a function inside of an object. A method is always a function, but a function isn't necessarily a method. Functions, more broadly, are chunks of code that execute a certain action, usually (but not necessarily) after having been passed arguments. Methods are object-specific functions that only the object that they are on have access to. For example, ".length" is a method on the object of an array or string that when invoked, returns the length of the array or string. 
 
-4. Describe the four rules of the 'this' keyword.
+3. What is closure? 
 
-5. Why do we need super() in an extended class?
+Closure is the concept that nested functions have access to their parent scope, but items within the parent scope do not have access to the nested function's scope. Every time you use a nested function, you're using closure. I like to think of it like zipped bags inside of other zipped bags. What is inside the smallest one can't be touched by the stuff inside the one around it unless it gets unzipped.
+
+4. Describe the four rules of the 'this' keyword. 
+
+The four rules of the "this" keyword are the following: 
+1. In the global scope, "this" refers to the window or console object. 
+2. "This" refers to the object to the left of/in front of the dot when a function is called (also refered to as implicit binding). Essentially, the meaning of "this" depends on the context in which it is run. 
+3. When we use a constructor to create a new object, "this" refers to the specific instance of the object created and returned by the constructor function. 
+4. In order to explicitly bind "this" to something other than what it would otherwise refer to, we use the .call() or .apply() method. Doing so changes the meaning of "this" to what we specify. 
+
+5. Why do we need super() in an extended class? 
+
+If you don't call super() in an extended class or sub-class before using the "this" keyword, you'll get a reference error. 
+
+
 
 ## Project Set up
 
