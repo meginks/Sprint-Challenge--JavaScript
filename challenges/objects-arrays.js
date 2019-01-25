@@ -77,9 +77,7 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  */
 
-let universities = graduates.map(function(graduate) {
-  return graduate.university;
-});
+let universities = graduates.map(graduate => graduate.university);
 
 console.log(universities);
 
@@ -97,9 +95,7 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
-const contactInfo = graduates.map(function(graduate) {
-  return `${graduate.first_name} ${graduate.email}`;
-})
+const contactInfo = graduates.map(graduate => `${graduate.first_name} ${graduate.email}`);
 
 console.log(contactInfo);
 
@@ -135,9 +131,7 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-const animalNames = zooAnimals.map(function(animal) {
-  return `Name: ${animal.animal_name} Scientific: ${animal.scientific_name}`;
-});
+const animalNames = zooAnimals.map(animal => `Name: ${animal.animal_name} Scientific: ${animal.scientific_name}`);
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -146,9 +140,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-const lowerCase = zooAnimals.map(function(animal){
-  return animal.animal_name.toLowerCase();
-});
+const lowerCase = zooAnimals.map(animal => animal.animal_name.toLowerCase());
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -168,7 +160,7 @@ The zoos need to know their total animal population across the United States.  F
 
 let populationTotal = 0;
 
-populationTotal = zooAnimals.reduce(function (populationTotal, animal) {return populationTotal += animal.population}, 0);
+populationTotal = zooAnimals.reduce((populationTotal, animal) => populationTotal += animal.population, 0);
 
 console.log(populationTotal);
 
